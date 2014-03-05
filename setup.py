@@ -1,5 +1,10 @@
 #!/usr/bin/env python
+import os
 from setuptools import setup, find_packages
+
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     name='django-tinymce',
@@ -8,7 +13,7 @@ setup(
     include_package_data=True,
     license='BSD License',  # example license
     description='Integrate TinyMCE 4 in Django projects.',
-    long_description='README.rst',
+    long_description=read('README.rst'),
     url='http://www.itcase.pro/',
     author='Petr Zelenin',
     author_email='po.zelenin@itcase.pro',
