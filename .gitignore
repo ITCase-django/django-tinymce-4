@@ -1,0 +1,12 @@
+# ****
+# Python
+# ****
+*.py[cod]
+
+# ****
+# Django
+# ****
+# STATIC
+django_tinymce/static/*
+!django_tinymce/static/django_tinymce
+!django_tinymce/static/filebrowser
