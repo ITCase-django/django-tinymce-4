@@ -1,6 +1,6 @@
-**************
-django-tinymce
-**************
+*****************
+django-tinymce-4
+*****************
 Integrate `TinyMCE`_ in `Django`_ projects.
 
 Features
