@@ -7,7 +7,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name='django-tinymce',
+    name='django-tinymce-4',
     version='0.0.1',
     packages=find_packages(),
     include_package_data=True,
