@@ -15,7 +15,7 @@ Install package from current repo:
 
 .. code-block:: bash
 
-  pip install git+git://github.com/ITCase/django-tinymce-4#egg=django-tinymce-4
+  pip install git+git://github.com/ITCase/django-tinymce-4
 
 
 Add application in project settings:
@@ -25,7 +25,7 @@ Add application in project settings:
   INSTALLED_APPS = (
       ...
       'filebrowser',
-      'django_tinymce',
+      'django_tinymce_4',
       ...
   )
 
