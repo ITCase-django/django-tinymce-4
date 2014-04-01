@@ -7,6 +7,6 @@
 # Django
 # ****
 # STATIC
-django_tinymce/static/*
-!django_tinymce/static/django_tinymce
-!django_tinymce/static/filebrowser
+django_tinymce_4/static/*
+!django_tinymce_4/static/django_tinymce_4
+!django_tinymce_4/static/filebrowser
