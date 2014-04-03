@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
-import json
 from django import forms
-# from django.forms.widgets import flatatt
-from django.utils.encoding import force_text
-from django.utils.safestring import mark_safe
-
-from django_tinymce_4 import settings as tinymce_settings
 
 
 class TinyMCEWidget(forms.Textarea):
-    """Textarea form widget with support TinyMCE.
-
+    """
+    Textarea form widget with support TinyMCE.
     See: http://www.tinymce.com/wiki.php/TinyMCE
     """
 
@@ -25,42 +19,31 @@ class TinyMCEWidget(forms.Textarea):
     class Media:
         js = [
             'django_tinymce_4/tinymce/tinymce.min.js',
-            'django_tinymce_4/tinymce/setup/django-filebrowser.js',
+            'django_tinymce_4/tinymce/settings/django-filebrowser.js',
         ]
 
 
 class TinyMCEFullWidget(TinyMCEWidget):
-    """Textarea form widget with support TinyMCE.
-
+    """
+    Textarea form widget with support TinyMCE.
     See: http://www.tinymce.com/wiki.php/TinyMCE
-
     This is widget for full config TinyMCE.
     """
 
-    def render(self, name, value, attrs=None):
-        if value is None: value = ''
-        final_attrs = self.build_attrs(attrs, name=name)
-        mce_json = json.dumps(tinymce_settings.DEFAULT_CONFIG.copy())
-        html = '<textarea%s>\r\n%s</textarea>' % (forms.widgets.flatatt(final_attrs),
-                                                  force_text(value))
-        html += '<script type="text/javascript">tinymce.init(%s)</script>' % mce_json
-        return mark_safe(html)
-
-    # class Media:
-    #     js = [
-    #         'django_tinymce_4/tinymce/setup/full.js',
-    #     ]
+    class Media:
+        js = [
+            'django_tinymce_4/tinymce/settings/full.js',
+        ]
 
 
 class TinyMCESmallWidget(TinyMCEWidget):
-    """Textarea form widget with support TinyMCE.
-
+    """
+    Textarea form widget with support TinyMCE.
     See: http://www.tinymce.com/wiki.php/TinyMCE
-
     This is widget for small config TinyMCE.
     """
 
     class Media:
         js = [
-            'django_tinymce_4/tinymce/setup/small.js',
+            'django_tinymce_4/tinymce/settings/small.js',
         ]
