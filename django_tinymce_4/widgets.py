@@ -33,6 +33,7 @@ class TinyMCEFullWidget(TinyMCEWidget):
     class Media:
         js = [
             'django_tinymce_4/tinymce/settings/full.js',
+            'django_tinymce_4/tinymce/settings/plugins.js'
         ]
 
 
@@ -46,4 +47,5 @@ class TinyMCESmallWidget(TinyMCEWidget):
     class Media:
         js = [
             'django_tinymce_4/tinymce/settings/small.js',
+            'django_tinymce_4/tinymce/settings/plugins.js'
         ]

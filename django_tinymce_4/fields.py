@@ -2,6 +2,7 @@
 # Django
 from django import forms
 from django.db import models
+
 # in-module
 from .widgets import TinyMCEFullWidget, TinyMCESmallWidget
 
