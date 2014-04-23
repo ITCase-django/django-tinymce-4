@@ -25,7 +25,7 @@ Add application in project settings:
   INSTALLED_APPS = (
       ...
       'filebrowser',
-      'django_tinymce_4',
+      'tinymce_4',
       ...
   )
 
