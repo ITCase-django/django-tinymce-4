@@ -1,12 +1,29 @@
-# ****
-# Python
-# ****
+###Python###
+
+# Byte-compiled / optimized / DLL files
 *.py[cod]
 
-# ****
-# Django
-# ****
-# STATIC
+# Distribution / packaging
+*.egg
+*.egg-info/
+develop-eggs/
+eggs/
+
+# Installer logs
+pip-delete-this-directory.txt
+pip-log.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Django stuff:
+
+# static
 tinymce_4/static/*
 !tinymce_4/static/tinymce_4
 !tinymce_4/static/filebrowser
