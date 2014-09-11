@@ -34,3 +34,24 @@ Add application in project settings:
 .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser/
 
 .. _TinyMCE: http://tinymce.com/
+  
+  
+USE
+=======
+
+.. code-block:: python
+
+  from tinymce_4.fields import TinyMCEModelField
+  from django.db import models
+  
+  class ModelFoo(models.Model):
+      content = TinyMCEModelField('foo content')
+  
+  
+if you using south you must use add_introspection_rules construction
+
+.. code-block:: python
+
+  from south.modelsinspector import add_introspection_rules
+  add_introspection_rules([], ["^tinymce_4\.fields\.TinyMCEModelField"])
+  
