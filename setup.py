@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 from setuptools import setup, find_packages
+from tinymce_4 import __version__
 
 
 def read(fname):
@@ -8,7 +9,7 @@ def read(fname):
 
 setup(
     name='django-tinymce-4',
-    version='0.0.1',
+    version=__version__,
     packages=find_packages(),
     include_package_data=True,
     license='BSD License',  # example license
