@@ -1,4 +1,3 @@
-import os
 from django.conf import settings
 
 # Settings from 'django_tinymce_4/tinymce/setup/full.js'
