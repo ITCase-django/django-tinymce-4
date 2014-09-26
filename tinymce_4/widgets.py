@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
-import json
 from django import forms
-from django.utils.encoding import force_text
-from django.utils.safestring import mark_safe
-
-from tinymce_4 import settings as tinymce_settings
 
 
 class TinyMCEWidget(forms.Textarea):
@@ -32,7 +27,6 @@ class TinyMCEWidget(forms.Textarea):
         ]
 
 
-
 class TinyMCEFullWidget(TinyMCEWidget):
     """
     Textarea form widget with support TinyMCE.
@@ -47,9 +41,6 @@ class TinyMCEFullWidget(TinyMCEWidget):
     #     html = '<textarea%s>\r\n%s</textarea>' % (forms.widgets.flatatt(final_attrs),
     #                                               force_text(value))
     #     html += '<script type="text/javascript">tinymce.init(%s)</script>' % mce_json
-    #     print
-    #     print html
-    #     print
     #     return mark_safe(html)
 
     class Media:
