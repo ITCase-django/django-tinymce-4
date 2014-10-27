@@ -1,5 +1,15 @@
 /*global tinymce: false*/
 
+function change_image_alignment(node, styles) {
+    if (node.nodeName == "IMG") {
+        $(node).removeAttr('style');
+        if (styles) {
+            $(node).css('margin', '5px');
+            $(node).css(styles);
+        }
+    }
+}
+
 tinymce.init({
     height: '350px',
     selector: 'textarea.tinymce',
@@ -42,8 +52,63 @@ tinymce.init({
         },
     },
 
-    toolbar1: 'insertfile undo redo | styleselect removeformat | link image media template | code | preview',
+    toolbar1: 'insertfile undo redo | styleselect removeformat | link image media template | code | preview | image_alignment',
     toolbar2: 'fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor',
+
+    setup: function(editor) {
+        editor.addButton('image_alignment', {
+            type: 'menubutton',
+            text: 'Image alignment',
+            icon: false,
+            menu: [
+                {
+                    text: 'Not set', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), false);
+                    }
+                },
+                {
+                    text: 'Left', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'float': 'left'});
+                    }
+                },
+                {
+                    text: 'Right', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'float': 'right'});
+                    }
+                },
+                {
+                    text: 'Baseline', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'vertical-align': 'baseline'});
+                    }
+                },
+                {
+                    text: 'Top', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'vertical-align': 'top'});
+                    }
+                },
+                {
+                    text: 'Middle', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'vertical-align': 'middle'});
+                    }
+                },
+                {
+                    text: 'Bottom', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'vertical-align': 'bottom'});
+                    }
+                },
+                {
+                    text: 'Text Top', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'vertical-align': 'text-top'});
+                    }
+                },
+                {
+                    text: 'Text Bottom', onclick: function() {
+                        change_image_alignment(editor.selection.getNode(), {'vertical-align': 'text-bottom'});
+                    }
+                }
+            ]
+        });
+    },
 
     style_formats: [
         {title: "Headers", items: [
