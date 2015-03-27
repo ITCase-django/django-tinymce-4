@@ -1,5 +1,7 @@
 /*global tinymce: false*/
 
+if ($ === undefined) $ = django.jQuery;
+
 function change_image_alignment(node, styles) {
     if (node.nodeName == "IMG") {
         $(node).removeAttr('style');
