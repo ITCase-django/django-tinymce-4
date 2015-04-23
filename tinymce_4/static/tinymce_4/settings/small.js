@@ -3,6 +3,7 @@
 tinymce.init({
     selector: 'textarea.tinymce',
     theme: 'modern',
+    relative_urls: false,
     style_formats: [
         {title: "Headers", items: [
             {title: "Header 1", format: "h1"},

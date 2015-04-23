@@ -16,6 +16,7 @@ tinymce.init({
     height: '350px',
     selector: 'textarea.tinymce',
     theme: 'modern',
+    relative_urls: false,
     valid_elements: '*[*]',
     content_css: [
         '/static/tinymce_4/tinymce_content.css?' + new Date().getTime(),
