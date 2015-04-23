@@ -18,12 +18,12 @@ class TinyMCEWidget(forms.Textarea):
 
     class Media:
         css = {
-            'all': ('tinymce_4/tinymce/tinymce.css',)
+            'all': ('tinymce_4/settings/django-grapelli.css',)
         }
 
         js = [
             'tinymce_4/tinymce/tinymce.min.js',
-            'tinymce_4/tinymce/settings/django-filebrowser.js',
+            'tinymce_4/settings/django-filebrowser.js',
         ]
 
 
@@ -45,7 +45,7 @@ class TinyMCEFullWidget(TinyMCEWidget):
 
     class Media:
         js = [
-            'tinymce_4/tinymce/settings/full.js',
+            'tinymce_4/settings/full.js',
         ]
 
 
@@ -58,5 +58,5 @@ class TinyMCESmallWidget(TinyMCEWidget):
 
     class Media:
         js = [
-            'tinymce_4/tinymce/settings/small.js',
+            'tinymce_4/settings/small.js',
         ]

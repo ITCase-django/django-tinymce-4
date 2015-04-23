@@ -1,0 +1,20 @@
+{
+  "name": "django-tinymce-4",
+  "version": "0.0.4",
+  "homepage": "https://github.com/ITCase/django-tinymce-4",
+  "authors": [
+    "ITCase <info@itcase.pro>"
+  ],
+  "description": "Integrate TinyMCE 4 in Django projects",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tinymce": "~4.1.9"
+  }
+}
