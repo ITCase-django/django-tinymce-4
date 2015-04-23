@@ -36,8 +36,18 @@ Add application in project settings (**order is important**):
 .. _TinyMCE: http://tinymce.com/
 
 
-USE
-=======
+Usage
+=====
+Add urls to urls.py for your project:
+
+.. code-block:: python
+
+  urlpatterns = patterns('',
+    ...
+    # TinyMCE plugins
+    url(r'^get_tinymce_plugins/$', get_tinymce_plugins, name='get_tinymce_plugins'),
+
+In your code:
 
 .. code-block:: python
 
@@ -45,8 +55,7 @@ USE
   from django.db import models
 
   class ModelFoo(models.Model):
-      content = TinyMCEModelField('foo content')
-
+      content = TinyMCEModelField('Foo content')
 
 if you using south you must use add_introspection_rules construction
 
