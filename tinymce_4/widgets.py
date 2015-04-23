@@ -34,15 +34,6 @@ class TinyMCEFullWidget(TinyMCEWidget):
     This is widget for full config TinyMCE.
     """
 
-    # def render(self, name, value, attrs=None):
-    #     if value is None: value = ''
-    #     final_attrs = self.build_attrs(attrs, name=name)
-    #     mce_json = json.dumps(tinymce_settings.DEFAULT_CONFIG.copy())
-    #     html = '<textarea%s>\r\n%s</textarea>' % (forms.widgets.flatatt(final_attrs),
-    #                                               force_text(value))
-    #     html += '<script type="text/javascript">tinymce.init(%s)</script>' % mce_json
-    #     return mark_safe(html)
-
     class Media:
         js = [
             'tinymce_4/settings/full.js',
