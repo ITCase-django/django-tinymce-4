@@ -1,6 +1,6 @@
 {
   "name": "django-tinymce-4",
-  "version": "0.0.4",
+  "version": "0.0.9",
   "homepage": "https://github.com/ITCase/django-tinymce-4",
   "authors": [
     "ITCase <info@itcase.pro>"

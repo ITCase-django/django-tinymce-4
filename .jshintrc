@@ -1,0 +1,19 @@
+{
+  "browser": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "freeze": true,
+  "funcscope": true,
+  "indent": 2,
+  "jquery": true,
+  "maxdepth": 3,
+  "maxlen": 80,
+  "maxstatements": 50,
+  "newcap": false,
+  "node": true,
+  "strict": true,
+  "undef": true,
+  "unused": true
+}

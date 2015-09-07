@@ -12,7 +12,7 @@ setup(
     version=__version__,
     packages=find_packages(),
     include_package_data=True,
-    license='BSD License',  # example license
+    license='MIT',
     description='Integrate TinyMCE 4 in Django projects.',
     long_description=read('README.rst'),
     url='http://www.itcase.pro/',
