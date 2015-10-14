@@ -17,12 +17,13 @@ function change_image_alignment(node, styles) {
 tinymce.init({
   height: '350px',
   selector: 'textarea.tinymce',
+  language_url : '/static/tinymce_4/langs/ru.js',
   theme: 'modern',
   relative_urls: false,
   valid_elements: '*[*]',
   content_css: [
-    '/static/tinymce_4/tinymce_content.css?' + new Date().getTime(),
-    '/static/tinymce_4/tinymce_reset.css?'+ new Date().getTime()
+    '/static/tinymce_4/css/tinymce_content.css?' + new Date().getTime(),
+    '/static/tinymce_4/css/tinymce_reset.css?'+ new Date().getTime()
   ],
 
   plugins: [
