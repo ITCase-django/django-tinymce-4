@@ -58,10 +58,9 @@ In your code:
   class ModelFoo(models.Model):
       content = TinyMCEModelField('Foo content')
 
-if you using south you must use add_introspection_rules construction
+if you using South you must use add_introspection_rules construction
 
 .. code-block:: python
 
   from south.modelsinspector import add_introspection_rules
   add_introspection_rules([], ["^tinymce_4\.fields\.TinyMCEModelField"])
-
