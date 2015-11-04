@@ -22,8 +22,7 @@ tinymce.init({
   relative_urls: false,
   valid_elements: '*[*]',
   content_css: [
-    '/static/tinymce_4/css/tinymce_content.css?' + new Date().getTime(),
-    '/static/tinymce_4/css/tinymce_reset.css?'+ new Date().getTime()
+    '/static/tinymce_4/css/__tinymce_4.css?' + new Date().getTime()
   ],
 
   plugins: [
