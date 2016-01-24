@@ -1,13 +1,11 @@
-*****************
 django-tinymce-4
-*****************
+================
 
 Integrate `TinyMCE`_ in `Django`_ projects.
 
 Features
 ========
 * Support only `TinyMCE`_ 4.
-
 * Support `django-filebrowser`_.
 
 Install
@@ -19,7 +17,7 @@ Install package from current repo:
   pip install git+git://github.com/ITCase-django/django-tinymce-4
 
 
-Add application in project settings (**order is important**):
+Add application in project settings **(order is important)**:
 
 .. code-block:: python
 

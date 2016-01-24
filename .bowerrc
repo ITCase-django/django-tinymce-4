@@ -1,3 +1,4 @@
 {
+  "strict-ssl": false,  "https-proxy": "",
   "directory" : "/tinymce_4/static/tinymce_4/"
 }
