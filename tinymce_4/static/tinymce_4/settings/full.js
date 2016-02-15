@@ -1,7 +1,5 @@
 'use strict';
 
-/*global tinymce: false*/
-
 if ($ === undefined) $ = django.jQuery;
 
 function change_image_alignment(node, styles) {
@@ -17,7 +15,7 @@ function change_image_alignment(node, styles) {
 tinymce.init({
   height: '350px',
   selector: 'textarea.tinymce',
-  language_url : '/static/tinymce_4/langs/ru.js',
+  // language_url : '/static/tinymce_4/langs/ru.js',
   theme: 'modern',
   relative_urls: false,
   valid_elements: '*[*]',
@@ -54,7 +52,7 @@ tinymce.init({
     table: {
       title : 'Table' ,
       items : 'inserttable tableprops deletetable | cell row column'
-    },
+    }
   },
 
   toolbar1: 'insertfile undo redo | styleselect removeformat | link image media template | code | preview | image_alignment',
@@ -144,7 +142,7 @@ tinymce.init({
       { title: 'Center', icon: 'aligncenter', format: 'aligncenter' },
       { title: 'Right', icon: 'alignright', format: 'alignright' },
       { title: 'Justify', icon: 'alignjustify', format: 'alignjustify' }
-    ]},
+    ]}
   ],
   fontsize_formats: '8px 10px 12px 14px 16px 18px 20px 22px 24px 26px 28px 36px 48px 72px',
 

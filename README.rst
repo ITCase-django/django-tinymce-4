@@ -1,11 +1,11 @@
 django-tinymce-4
 ================
 
-Integrate `TinyMCE`_ in `Django`_ projects.
+Integrate `TinyMCE4`_ in `Django`_ projects.
 
 Features
 ========
-* Support only `TinyMCE`_ 4.
+* Support only `TinyMCE4`_.
 * Support `django-filebrowser`_.
 
 Install
@@ -22,31 +22,18 @@ Add application in project settings **(order is important)**:
 .. code-block:: python
 
   INSTALLED_APPS = (
-      ...
-      'tinymce_4',
       'filebrowser',
-      ...
+      'grappelli',
+      'tinymce_4',
   )
 
-.. _Django: http://djangoproject.com/
-
 .. _django-filebrowser: https://github.com/sehmaschine/django-filebrowser/
-
-.. _TinyMCE: http://tinymce.com/
+.. _Django: http://djangoproject.com/
+.. _TinyMCE4: http://tinymce.com/
 
 
 Usage
 =====
-Add urls to urls.py for your project:
-
-.. code-block:: python
-
-  urlpatterns = patterns('',
-    ...
-    # TinyMCE plugins
-    url(r'^get_tinymce_plugins/$', get_tinymce_plugins, name='get_tinymce_plugins'),
-
-In your code:
 
 .. code-block:: python
 
@@ -55,10 +42,3 @@ In your code:
 
   class ModelFoo(models.Model):
       content = TinyMCEModelField('Foo content')
-
-if you using South you must use add_introspection_rules construction
-
-.. code-block:: python
-
-  from south.modelsinspector import add_introspection_rules
-  add_introspection_rules([], ["^tinymce_4\.fields\.TinyMCEModelField"])

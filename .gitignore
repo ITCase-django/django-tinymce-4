@@ -28,3 +28,7 @@ tinymce_4/static/*
 !tinymce_4/static/tinymce_4
 !tinymce_4/static/filebrowser
 !tinymce_4/static/grappelli
+
+# node
+**/node_modules
+npm-debug.log

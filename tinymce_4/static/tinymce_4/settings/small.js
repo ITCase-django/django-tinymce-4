@@ -1,5 +1,4 @@
 'use strict';
-/*global tinymce: false*/
 
 tinymce.init({
   selector: 'textarea.tinymce',
@@ -34,6 +33,6 @@ tinymce.init({
       { title: 'Center', icon: 'aligncenter', format: 'aligncenter' },
       { title: 'Right', icon: 'alignright', format: 'alignright' },
       { title: 'Justify', icon: 'alignjustify', format: 'alignjustify'}
-    ]},
-  ],
+    ]}
+  ]
 });

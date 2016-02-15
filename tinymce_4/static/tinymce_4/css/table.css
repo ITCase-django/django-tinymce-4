@@ -1,0 +1,37 @@
+table
+{
+  border-collapse: collapse;
+  margin: 0 0 1em 0;
+}
+  tr
+  {
+    color: #444;
+  }
+    th
+    {
+      font: bold 0.75em 'Arial', Helvetica, sans-serif;
+      text-align: left;
+      padding: 0.5em 1em;
+      background: #eee;
+    }
+      th p
+      {
+        font: bold 1em 'Arial', Helvetica, sans-serif;
+        padding: 0;
+        line-height: 1em;
+      }
+    td
+    {
+      font: 0.95em 'Arial', Helvetica, sans-serif;
+      color: #444;
+      line-height: 1.4em;
+      padding: 0.5em 1em;
+      vertical-align: top;
+    }
+      td p
+      {
+        font: 1em 'Arial', Helvetica, sans-serif;
+        color: #444;
+        line-height: 1.4em;
+        padding: 0;
+      }

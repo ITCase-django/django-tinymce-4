@@ -1,0 +1,10 @@
+{
+  "extends": "defaults",
+  "globals": {
+    "$": true,
+    "django": true,
+    "DjangoFilebrowser": true,
+    "jQuery": true,
+    "tinymce": true,
+  }
+}

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Django
+
 from django import forms
 from django.db import models
 

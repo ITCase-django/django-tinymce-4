@@ -14,14 +14,16 @@
   "ignore": [
     "readme.md",
     "composer.json",
-    "package.json"
+    "package.json",
+    ".npmignore",
+    "changelog.txt"
   ],
-  "version": "4.3.3",
-  "_release": "4.3.3",
+  "version": "4.3.4",
+  "_release": "4.3.4",
   "_resolution": {
     "type": "version",
-    "tag": "4.3.3",
-    "commit": "ea98451a2b7b7d64b5aa3c33509bd07406a6ab90"
+    "tag": "4.3.4",
+    "commit": "4db115aff381c7e881193eede8cb8d8172d01963"
   },
   "_source": "git://github.com/tinymce/tinymce-dist.git",
   "_target": "~4.3.3",

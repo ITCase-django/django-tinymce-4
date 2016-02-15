@@ -1,0 +1,29 @@
+h1
+{
+  font: 1.2em 'Arial', Helvetica, sans-serif;
+  color: #444;
+  padding: 0 0 0.3em 0;
+}
+h2
+{
+  font: 1.1em 'Arial', Helvetica, sans-serif;
+  color: #444;
+  padding: 0 0 0.3em 0;
+}
+h3
+{
+  font: 1em 'Arial', Helvetica, sans-serif;
+  color: #444;
+  padding: 0 0 0.3em 0;
+}
+h5
+{
+  width: 100%;
+  font: 1em 'Arial', Helvetica, sans-serif;
+  color: #444;
+  padding: 0.3em 0 0.2em 0.5em;
+  margin: 0 0 0.5em 0;
+  background: #EFEFEF;
+  position: relative;
+  left: -0.5em;
+}
