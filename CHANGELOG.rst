@@ -1,13 +1,16 @@
 Changelog
 =========
 
-0.0.13
+0.0.14
 ------
 * Add default tinymce content CSS styles
 * Add eslint
 * Remove unused grappelli and filebrowser js files
 * Update to TinyMCE 4.3.4
 
+0.0.13
+------
+* Update to TinyMCE 4.3.3
 
 0.0.12
 ------
