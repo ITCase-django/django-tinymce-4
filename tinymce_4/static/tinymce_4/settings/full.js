@@ -18,6 +18,7 @@ tinymce.init({
   // language_url : '/static/tinymce_4/langs/ru.js',
   theme: 'modern',
   relative_urls: false,
+  convert_urls: false,
   valid_elements: '*[*]',
   content_css: [
     '/static/tinymce_4/css/__tinymce_4.css?' + new Date().getTime()
