@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.0.15
+------
+* Disable converting urls in "full" settings
+* Fix filebrowser error
+
 0.0.14
 ------
 * Add default tinymce content CSS styles
