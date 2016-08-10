@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div>
+        {% for obj in tiny_objects %}
+            <div>{{ obj.tiny_field|safe }}</div>
+            <hr />
+        {% empty %}
+            <div>login: "admin"</div>
+            <div>password: "admin"</div>
+            <br />
+            <div><a href="/admin/tiny_example/testtiny/add/" target="_blank">Add new object</a></div>
+        {% endfor %}
+    </div>
+</body>
+</html>
