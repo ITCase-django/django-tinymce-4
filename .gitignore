@@ -21,6 +21,9 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
+# Database
+*.sqlite[3]
+
 # Django stuff:
 
 # static

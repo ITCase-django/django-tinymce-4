@@ -24,9 +24,12 @@ Add application in project settings **(order is important)**:
 .. code-block:: python
 
   INSTALLED_APPS = (
-      'filebrowser',
-      'grappelli',
+      ...,
       'tinymce_4',
+      'grappelli',
+      'filebrowser',
+      'django.contrib.admin',
+      ...
   )
 
 Usage
