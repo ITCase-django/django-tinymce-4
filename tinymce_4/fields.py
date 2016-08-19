@@ -3,13 +3,12 @@
 from django import forms
 from django.db import models
 
-# in-module
 from .widgets import TinyMCEFullWidget, TinyMCESmallWidget
 
 
 class TinyMCEFormField(forms.CharField):
 
-    """Form field with support TinyMCE."""
+    '''Form field with support TinyMCE.'''
 
     widget = TinyMCEFullWidget
 
@@ -21,7 +20,7 @@ class TinyMCEFormField(forms.CharField):
 
 class TinyMCEModelField(models.TextField):
 
-    """Model field with support TinyMCE."""
+    '''Model field with support TinyMCE.'''
 
     def __init__(self, *args, **kwargs):
         self._small_tiny = kwargs.pop('small_tiny', False)

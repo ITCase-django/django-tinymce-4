@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "tinymce": "~4.3.3"
+    "tinymce": "~4.4.1"
   }
 }

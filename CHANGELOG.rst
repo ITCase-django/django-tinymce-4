@@ -1,6 +1,15 @@
 Changelog
 =========
 
+0.0.16
+------
+* Update to TinyMCE 4.4.1
+* Add custom settings files
+
+0.0.15
+------
+* Add 'example'
+
 0.0.13
 ------
 * Add default tinymce content CSS styles

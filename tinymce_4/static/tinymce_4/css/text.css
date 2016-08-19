@@ -1,28 +1,22 @@
-a
-{
+a {
   color: #006699;
 }
-a:hover
-{
+a:hover {
   color: #EF7F1B;
 }
-p
-{
+p {
   font: 0.95em 'Arial', Helvetica, sans-serif;
   color: #444;
   margin: 0;
   padding: 0 0 0.5em 0;
   line-height: 1.5em;
 }
-em
-{
+em {
   font-style: italic;
 }
-strong
-{
+strong {
   font-weight: bold;
 }
-i
-{
+i {
   font-style: italic;
 }
