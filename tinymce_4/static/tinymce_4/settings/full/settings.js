@@ -1,8 +1,9 @@
 var tinySettings = {
   selector: 'textarea.tinymce',
-  language_url : '/static/tinymce_4/langs/ru.js',
+  // language_url : '/static/tinymce_4/langs/ru.js',
   theme: 'modern',
   relative_urls: false,
+  convert_urls: false,
   valid_elements: '*[*]',
   height: '350px',
 
