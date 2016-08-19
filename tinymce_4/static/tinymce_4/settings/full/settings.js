@@ -14,29 +14,6 @@ var tinySettings = {
   plugin_preview_width : '730',
   plugin_preview_height : '550',
 
-  menu : {
-    edit: {
-      title : 'Edit',
-      items : 'undo redo | cut copy paste pastetext | selectall'
-    },
-    insert : {
-      title : 'Insert',
-      items : 'link image media | template'
-    },
-    view: {
-      title : 'View'  ,
-      items : 'visualaid, visualblocks'
-    },
-    format: {
-      title : 'Format',
-      items : 'bold italic underline strikethrough superscript subscript | formats | removeformat'
-    },
-    table: {
-      title : 'Table' ,
-      items : 'inserttable tableprops deletetable | cell row column'
-    },
-  },
-
   toolbar1: 'example, insertfile undo redo | styleselect removeformat | link image media template anchor | code | preview | image_alignment',
   toolbar2: 'fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor',
 

@@ -38,8 +38,9 @@ class TinyMCEFullWidget(TinyMCEWidget):
         js = [
             'tinymce_4/settings/full/settings.js',
             'tinymce_4/settings/full/external_plugins.js',
-            'tinymce_4/settings/full/templates.js',
+            'tinymce_4/settings/full/menu.js',
             'tinymce_4/settings/full/plugins.js',
+            'tinymce_4/settings/full/templates.js',
             'tinymce_4/settings/full.js',
         ]
 
