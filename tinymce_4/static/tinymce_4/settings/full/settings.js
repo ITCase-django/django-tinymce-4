@@ -12,7 +12,7 @@ var tinySettings = {
   ],
 
   plugins: [
-    'advlist anchor autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+    'gallery, advlist anchor autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
     'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
     'save table contextmenu directionality emoticons template paste textcolor'
   ],
@@ -43,7 +43,7 @@ var tinySettings = {
     },
   },
 
-  toolbar1: 'insertfile undo redo | styleselect removeformat | link image media template anchor | code | preview | image_alignment',
+  toolbar1: 'example, insertfile undo redo | styleselect removeformat | link image media template anchor | code | preview | image_alignment',
   toolbar2: 'fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor',
 
   style_formats: [

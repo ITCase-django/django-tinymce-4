@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.0.17
+------
+* Fix varible name 'external plugin'
+
 0.0.16
 ------
 * Update to TinyMCE 4.4.1
