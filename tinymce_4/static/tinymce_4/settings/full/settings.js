@@ -11,12 +11,6 @@ var tinySettings = {
     '/static/tinymce_4/css/__tinymce_4.css?' + new Date().getTime()
   ],
 
-  plugins: [
-    'advlist anchor autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
-    'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-    'save table contextmenu directionality emoticons template paste textcolor'
-  ],
-
   plugin_preview_width : '730',
   plugin_preview_height : '550',
 

@@ -47,6 +47,7 @@ Custom Settings
 ===============
 
 * `Base Settings`_: /tinymce_4/static/tinymce_4/settings/full/setings.js
+*  Plugins: /tinymce_4/static/tinymce_4/settings/full/plugins.js
 * `External plugin`_: /tinymce_4/static/tinymce_4/settings/full/external_plugins.js
 * `Templates`_: /tinymce_4/static/tinymce_4/settings/full/templates.js
 
