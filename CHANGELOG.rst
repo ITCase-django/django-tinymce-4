@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.0.17
+------
+* Update 'setup.py'
+
 0.0.16
 ------
 * Update to TinyMCE 4.4.1

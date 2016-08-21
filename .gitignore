@@ -1,3 +1,13 @@
+# Gulp
+gulp-tasks
+gulpfile.js
+gulpfile.local.js
+gulpfile.paths.js
+
+# Webpack
+webpack.config.dev.js
+webpack.config.prod.js
+
 ###Python###
 
 # Byte-compiled / optimized / DLL files
