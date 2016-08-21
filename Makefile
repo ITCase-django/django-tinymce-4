@@ -9,5 +9,5 @@ gulpgulptasks:
 webpackconfig:
 	git archive --remote=git@bitbucket.org:itcase-dev/gulp-tasks.git master webpack.* | tar -xv
 
-pypi
+pypi:
 	python setup.py sdist upload
