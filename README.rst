@@ -12,11 +12,9 @@ Features
 Install
 =======
 
-Install package from current repo:
-
 .. code-block:: bash
 
-  pip install git+git://github.com/ITCase-django/django-tinymce-4
+  pip install django-tinymce-4
 
 
 Add application in project settings **(order is important)**:
