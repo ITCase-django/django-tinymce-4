@@ -4,6 +4,7 @@ Changelog
 0.0.17
 ------
 * Update 'setup.py'
+* Pulish on pypi use 'pip install django-tinymce-4'
 
 0.0.16
 ------
