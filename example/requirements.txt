@@ -1,7 +1,6 @@
 django>=1.9,<1.10
 django-filebrowser>=3.7,<3.8
 django-grappelli>=2.8,<2.9
+django-tinymce-4
 
 Pillow
-
-git+git://github.com/ITCase-django/django-tinymce-4.git

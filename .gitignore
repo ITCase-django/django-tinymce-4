@@ -1,12 +1,5 @@
-# Gulp
-gulp-tasks
-gulpfile.js
-gulpfile.local.js
-gulpfile.paths.js
-
-# Webpack
-webpack.config.dev.js
-webpack.config.prod.js
+# Example
+/example/db.sqlite3
 
 #### joe made this: http://goel.io/joe
 

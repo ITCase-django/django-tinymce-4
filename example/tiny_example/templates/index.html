@@ -6,12 +6,9 @@
 <body>
     <div>
         {% for obj in tiny_objects %}
-            <div>{{ obj.tiny_field|safe }}</div>
-            <hr />
+            {{ obj.tiny_field|safe }}
         {% empty %}
-            <div>login: "admin"</div>
-            <div>password: "admin"</div>
-            <br />
+            <div>Run make init-example in django-tinymce-4 dir</div>
             <div><a href="/admin/tiny_example/testtiny/add/" target="_blank">Add new object</a></div>
         {% endfor %}
     </div>
