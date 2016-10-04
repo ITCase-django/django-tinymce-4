@@ -14,6 +14,9 @@ if (typeof tinySettings === 'object') {
   if (typeof externalPlugins === 'object') {
     tinySettings.external_plugins = externalPlugins;
   }
+  if (typeof styleFormats === 'object') {
+    tinySettings.style_formats = styleFormats.concat(customStyleFormats);
+  }
   if (typeof templates === 'object') {
     tinySettings.templates = templates;
   }

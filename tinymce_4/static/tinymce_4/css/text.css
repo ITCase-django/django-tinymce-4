@@ -1,22 +1,28 @@
+@import './settings.css';
+
 a {
   color: #006699;
 }
+
 a:hover {
-  color: #EF7F1B;
+  color: #ef7f1b;
 }
+
 p {
-  font: 0.95em 'Arial', Helvetica, sans-serif;
+  font: 14px/20px var(--font);
   color: #444;
   margin: 0;
-  padding: 0 0 0.5em 0;
-  line-height: 1.5em;
+  padding: 0 0 8px 0;
 }
+
 em {
   font-style: italic;
 }
+
 strong {
   font-weight: bold;
 }
+
 i {
   font-style: italic;
 }

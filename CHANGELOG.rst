@@ -6,11 +6,12 @@ Changelog
 * Update 'gulpfile'
 * Update 'readme'
 * Update tinymce4 to 4.4.3
+* Add 'style_formats' and 'custom_style_formats' js files
 
 0.0.17
 ------
 * Update 'setup.py'
-* Pulish on pypi use 'pip install django-tinymce-4'
+* Publish on pypi use 'pip install django-tinymce-4'
 
 0.0.16
 ------

@@ -1,25 +1,31 @@
+@import './settings.css';
+
 h1 {
-  font: 1.2em 'Arial', Helvetica, sans-serif;
+  font: 28px var(--font);
   color: #444;
-  padding: 0 0 0.3em 0;
+  padding: 0 0 5px 0;
 }
+
 h2 {
-  font: 1.1em 'Arial', Helvetica, sans-serif;
+  font: 26px var(--font);
   color: #444;
-  padding: 0 0 0.3em 0;
+  padding: 0 0 5px 0;
 }
+
 h3 {
-  font: 1em 'Arial', Helvetica, sans-serif;
+  font: 24px var(--font);
   color: #444;
-  padding: 0 0 0.3em 0;
+  padding: 0 0 5px 0;
 }
-h5 {
-  width: 100%;
-  font: 1em 'Arial', Helvetica, sans-serif;
+
+h4 {
+  font: 22px var(--font);
   color: #444;
-  padding: 0.3em 0 0.2em 0.5em;
-  margin: 0 0 0.5em 0;
-  background: #EFEFEF;
-  position: relative;
-  left: -0.5em;
+  padding: 0 0 5px 0;
+}
+
+h5 {
+  font: 20px var(--font);
+  color: #444;
+  padding: 0 0 5px 0;
 }

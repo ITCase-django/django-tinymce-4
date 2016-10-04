@@ -14,9 +14,11 @@
     "node": ">= 5.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.4.1",
-    "eslint": "^1.10.3",
-    "eslint-config-defaults": "^9.0.0",
+    "autoprefixer": "^6.5.0",
+    "eslint": "^3.7.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-batch": "~1.0.5",
     "gulp-concat": "^2.6.0",
@@ -30,20 +32,20 @@
     "gulp-postcss": "^6.2.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.9",
+    "gulp-watch": "^4.3.10",
     "postcss-calc": "^5.3.1",
     "postcss-color-function": "^2.0.1",
-    "postcss-css-variables": "^0.5.2",
+    "postcss-css-variables": "^0.6.0",
     "postcss-custom-properties": "^5.0.1",
     "postcss-import": "^8.1.2",
     "postcss-nested": "^1.0.0",
     "postcss-opacity": "^4.0.0",
     "postcss-pxtorem": "^3.3.1",
     "postcss-reporter": "^1.4.1",
-    "stylelint": "^7.2.0",
-    "stylelint-config-standard": "^13.0.0",
+    "stylelint": "^7.3.1",
+    "stylelint-config-standard": "^13.0.2",
     "vinyl-map": "^1.0.1",
-    "yargs": "^5.0.0"
+    "yargs": "^6.0.0"
   },
   "license": "MIT"
 }

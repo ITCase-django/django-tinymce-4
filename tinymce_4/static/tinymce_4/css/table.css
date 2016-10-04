@@ -1,31 +1,32 @@
+@import './settings.css';
+
 table {
   border-collapse: collapse;
   margin: 0 0 1em 0;
-}
-  tr {
+  & tr {
     color: #444;
-  }
-    th {
-      font: bold 0.75em 'Arial', Helvetica, sans-serif;
+    & th {
+      font: bold 13px var(--font);
       text-align: left;
-      padding: 0.5em 1em;
+      padding: 5px 15px;
       background: #eee;
-    }
-      th p {
-        font: bold 1em 'Arial', Helvetica, sans-serif;
+      & p {
+        font: bold 13px var(--font);
         padding: 0;
-        line-height: 1em;
+        margin: 0;
       }
-    td {
-      font: 0.95em 'Arial', Helvetica, sans-serif;
+    }
+    & td {
+      font: bold 13px/20px var(--font);
       color: #444;
-      line-height: 1.4em;
-      padding: 0.5em 1em;
+      padding: 5px 15px;
       vertical-align: top;
-    }
-      td p {
-        font: 1em 'Arial', Helvetica, sans-serif;
+      & p {
+        font: 14px/20px var(--font);
         color: #444;
-        line-height: 1.4em;
         padding: 0;
+        margin: 0;
       }
+    }
+  }
+}
