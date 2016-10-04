@@ -1,8 +1,12 @@
 Changelog
 =========
 
-0.0.18 (development)
+0.0.19 (development)
 --------------------
+
+
+0.0.18
+------
 * Update 'gulpfile'
 * Update 'readme'
 * Update tinymce4 to 4.4.3
