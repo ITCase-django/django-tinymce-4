@@ -1,6 +1,6 @@
 {
   "name": "django-tinymce-4",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "homepage": "https://github.com/ITCase-django/django-tinymce-4",
   "authors": [
     "ITCase <info@itcase.pro>"
@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "tinymce": "~4.4.3"
+    "tinymce": "~4.7.1"
   }
 }

@@ -14,6 +14,12 @@ if (typeof tinySettings === 'object') {
   if (typeof externalPlugins === 'object') {
     tinySettings.external_plugins = externalPlugins;
   }
+  if (typeof imageClassList === 'object') {
+    tinySettings.image_class_list = imageClassList;
+  }
+  if (typeof languageUrl === 'string') {
+    tinySettings.language_url = languageUrl
+  }
   if (typeof styleFormats === 'object') {
     tinySettings.style_formats = styleFormats.concat(customStyleFormats);
   }
@@ -22,5 +28,5 @@ if (typeof tinySettings === 'object') {
   }
   tinymce.init(tinySettings);
 } else {
-  console.warn('tinySettings is not exists');
+  console.warn('tinyMCE 4 Settings is not exists');
 }

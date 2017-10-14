@@ -2,7 +2,7 @@
 
 ol {
   counter-reset: list1;
-  padding: 0 0 1em 1em;
+  padding: 0 0 15px 15px;
   & li {
     position: relative;
     display: block;
@@ -20,7 +20,7 @@ ol {
       top: 0;
     }
     & * ol {
-      margin: 1.5em 0 0 0;
+      margin: 20px 0 0 0;
       padding-bottom: 0;
       & li:last-child {
         padding-bottom: 0;
@@ -44,10 +44,10 @@ ul {
     }
     &::before {
       content: '\2014\a0';
-      padding: 0 0.5em 0 0;
+      padding: 0 8px 0 0;
     }
     & * ul {
-      margin: 1.5em 0 0 0;
+      margin: 24px 0 0 0;
       padding-bottom: 0;
       & li:last-child {
         padding-bottom: 0;

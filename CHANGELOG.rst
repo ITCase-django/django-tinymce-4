@@ -1,9 +1,13 @@
 Changelog
 =========
 
-0.0.19 (development)
+0.0.20 (development)
 --------------------
 
+0.0.19
+------
+* Update tinymce4 to 4.7.1
+* Add 'image_class_list'
 
 0.0.18
 ------

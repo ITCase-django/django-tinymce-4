@@ -18,5 +18,9 @@ var menu = {
   table: {
     title: 'Table',
     items: 'inserttable tableprops deletetable | cell row column'
+  },
+  plugins: {
+    title: 'Plugins',
+    items: 'insertzoomimage'
   }
 }

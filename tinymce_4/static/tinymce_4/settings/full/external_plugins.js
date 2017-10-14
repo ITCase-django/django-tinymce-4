@@ -1,3 +1,3 @@
 var externalPlugins = {
-  //'testing': 'http://www.testing.com/plugin.min.js',
+  'insertzoomimage': '/static/tinymce_4/plugins/insertZoomImage.js'
 }

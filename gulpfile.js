@@ -3,11 +3,11 @@
 const gulp = require('gulp')
 const plugins = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'] })
 
-const argv = require('yargs').argv;
+const argv = require('yargs').argv
 const map = require('vinyl-map')
 
 const TARGET_CSS = '__tinymce-4.css'
-const TARGET_CSS_PATH ='./tinymce_4/static/tinymce_4/css/'
+const TARGET_CSS_PATH = './tinymce_4/static/tinymce_4/css/'
 const CSS_FILES = [
   './tinymce_4/static/tinymce_4/css/*.css',
   './tinymce_4/static/tinymce_4/css/**/*.css',
@@ -95,7 +95,7 @@ gulp.task('css', () => {
 })
 
 gulp.task('watch', () => {
-  plugins.watch(paths.CSS_FILES, { verbose: true },
+  plugins.watch(CSS_FILES, { verbose: true },
     plugins.batch((cb) => {
       gulp.series('css')()
       cb()
