@@ -1,12 +1,34 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "function-url-quotes" : "single",
+    "no-descending-specificity": null,
+    "shorthand-property-no-redundant-values": null,
+    "at-rule-empty-line-before": ["never", {
+      except: [
+        "blockless-after-same-name-blockless",
+        "blockless-after-blockless",
+      ],
+      ignore: [
+        "after-comment",
+        "blockless-after-blockless"
+      ]
+    }],
+    "function-url-quotes": "always",
+    "max-nesting-depth": 10,
     "string-quotes": "single",
-    "indentation": "null",
-    "at-rule-empty-line-before": "never",
-    "rule-nested-empty-line-before": "never-multi-line",
-    "rule-non-nested-empty-line-before": "always-multi-line",
-    "shorthand-property-no-redundant-values": "never"
+    "indentation": null,
+    "block-no-empty": null,
+    "comment-empty-line-before": "never",
+    "rule-empty-line-before": [
+      "always", {
+        except: [
+          "first-nested",
+          "inside-block-and-after-rule"
+        ],
+        ignore: [
+          "inside-block"
+        ]
+      }
+    ]
   }
 }

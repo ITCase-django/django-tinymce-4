@@ -1,8 +1,14 @@
 Changelog
 =========
 
-0.0.20 (development)
+0.0.21 (development)
 --------------------
+
+0.0.20
+------
+* Update tinymce4 to 4.7.9
+* Update packages
+* Add valid_children and disabled force_root_block settings
 
 0.0.19
 ------

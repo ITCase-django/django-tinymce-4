@@ -4,6 +4,8 @@ var tinySettings = {
   relative_urls: false,
   convert_urls: false,
   valid_elements: '*[*]',
+  valid_children: '+a[h1|h2|h3|h4|h5|h6|p|span|div|img]',
+  forced_root_block: false,
   height: '350px',
 
   language_url: '',
