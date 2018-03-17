@@ -6,6 +6,8 @@ var tinySettings = {
   valid_elements: '*[*]',
   valid_children: '+a[h1|h2|h3|h4|h5|h6|p|span|div|img]',
   forced_root_block: false,
+  force_br_newlines: false,
+  force_p_newlines: true,
   height: '350px',
 
   language_url: '',

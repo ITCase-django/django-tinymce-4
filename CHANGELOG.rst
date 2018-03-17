@@ -1,8 +1,12 @@
 Changelog
 =========
 
-0.0.21 (development)
+0.0.22 (development)
 --------------------
+
+0.0.21
+------
+* Fix p on enter
 
 0.0.20
 ------
