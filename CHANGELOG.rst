@@ -1,8 +1,12 @@
 Changelog
 =========
 
-0.0.22 (development)
+0.0.23 (development)
 --------------------
+
+0.0.22
+------
+* Add table class list
 
 0.0.21
 ------

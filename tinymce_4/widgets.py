@@ -44,6 +44,7 @@ class TinyMCEFullWidget(TinyMCEWidget):
             'tinymce_4/settings/full/language_url.js',
             'tinymce_4/settings/full/plugins.js',
             'tinymce_4/settings/full/style_formats.js',
+            'tinymce_4/settings/full/table_class_list.js',
             'tinymce_4/settings/full/templates.js',
             'tinymce_4/settings/full.js',
         ]

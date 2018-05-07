@@ -20,6 +20,7 @@ var tinySettings = {
   plugin_preview_height: '550',
 
   image_class_list: [],
+  table_class_list: [],
 
   toolbar1: 'undo redo | styleselect removeformat | image insertzoomimage | link media template anchor | code | preview | image_alignment',
   toolbar2: 'fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor',
