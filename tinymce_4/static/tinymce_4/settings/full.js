@@ -20,6 +20,9 @@ if (typeof tinySettings === 'object') {
   if (typeof languageUrl === 'string') {
     tinySettings.language_url = languageUrl
   }
+  if (typeof tableClassList === 'object') {
+    tinySettings.table_class_list = imageClassList;
+  }
   if (typeof styleFormats === 'object') {
     tinySettings.style_formats = styleFormats.concat(customStyleFormats);
   }

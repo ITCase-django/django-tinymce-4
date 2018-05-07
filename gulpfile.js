@@ -4,6 +4,8 @@ const gulp = require('gulp')
 const plugins = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'] })
 
 const argv = require('yargs').argv
+const chalk = require('chalk')
+const log = require('fancy-log')
 const map = require('vinyl-map')
 
 const TARGET_CSS = '__tinymce-4.css'
@@ -58,9 +60,10 @@ gulp.task('css', () => {
   return gulp.src(CSS_FILES)
     .pipe(plugins.plumber({
       errorHandler: (err) => {
-        plugins.util.log(
-          plugins.util.colors.red('gulp-css:'),
-          plugins.util.colors.yellow(err.message))
+        log(
+          chalk.red('gulp-css:'),
+          chalk.yellow(err.message),
+          chalk.yellow(err))
       }
     }))
     .pipe(plugins.sourcemaps.init())
@@ -89,8 +92,7 @@ gulp.task('css', () => {
     .pipe(gulp.dest(TARGET_CSS_PATH))
     .pipe(plugins.filter('**/*.css'))
     .pipe(map((code, filename) => {
-      plugins.util.log('CSS: ' +
-      plugins.util.colors.green(filename))
+      log('CSS: ' + chalk.green(filename))
     }))
 })
 

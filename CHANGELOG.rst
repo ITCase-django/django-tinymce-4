@@ -7,6 +7,7 @@ Changelog
 0.0.22
 ------
 * Add table class list
+* Update tinymce4 to 4.7.12
 
 0.0.21
 ------

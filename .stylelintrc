@@ -1,18 +1,50 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+    ],
   "rules": {
+    "order/properties-order": [
+      "width",
+      "height",
+      "min-width",
+      "min-height",
+      "max-width",
+      "max-height",
+      "font",
+      "color",
+      "text-shadow",
+      "text-decoration",
+      "text-transform",
+      "text-align",
+      "white-space",
+      "background",
+      "padding",
+      "margin",
+      "border",
+      "border-radius",
+      "position",
+      "display",
+      "content",
+      "left",
+      "top",
+      "right",
+      "bottom",
+      "vertical-align"
+    ],
     "no-descending-specificity": null,
     "shorthand-property-no-redundant-values": null,
-    "at-rule-empty-line-before": ["never", {
+    "at-rule-empty-line-before": [
+      "never",
       except: [
         "blockless-after-same-name-blockless",
-        "blockless-after-blockless",
+        "blockless-after-blockless"
       ],
       ignore: [
         "after-comment",
         "blockless-after-blockless"
       ]
-    }],
+    ],
     "function-url-quotes": "always",
     "max-nesting-depth": 10,
     "string-quotes": "single",
