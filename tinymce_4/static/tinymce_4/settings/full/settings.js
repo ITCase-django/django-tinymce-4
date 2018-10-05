@@ -1,5 +1,5 @@
 var tinySettings = {
-  selector: 'textarea.tinymce',
+  // selector: 'textarea.tinymce4',
   theme: 'modern',
   relative_urls: false,
   convert_urls: false,

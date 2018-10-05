@@ -9,13 +9,12 @@ class TinyMCEWidget(forms.Textarea):
     See: http://www.tinymce.com/wiki.php/TinyMCE
     '''
 
-    _css_class = 'tinymce'
+    tiny_class = 'tinymce4'
 
-    def __init__(self, attrs=None):
-        attrs = attrs or {}
+    def __init__(self, attrs={}):
         css_class = attrs.get('class', '')
-        attrs['class'] = ' '.join([css_class, self._css_class])
-        super(TinyMCEWidget, self).__init__(attrs)
+        attrs['class'] = ' '.join([self.tiny_class, css_class])
+        super().__init__(attrs)
 
     class Media:
         css = {
@@ -23,6 +22,7 @@ class TinyMCEWidget(forms.Textarea):
         }
         js = [
             'tinymce_4/tinymce/tinymce.min.js',
+            'tinymce_4/tinymce/tinymce_initialization.js',
             'tinymce_4/settings/django-filebrowser.js',
         ]
 

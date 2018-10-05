@@ -1,5 +1,21 @@
 # Example
-/example/db.sqlite3
+example/*.db
+example/*.sqlite*
+example/media/*
+
+# Bower
+bower_components
+
+# Gulp
+gulp-tasks
+gulpfile.js
+gulpfile.local.js
+gulpfile.paths.js
+!defaults/gulpfile.local.js
+
+# Webpack
+webpack.config.dev.js
+webpack.config.prod.js
 
 #### joe made this: http://goel.io/joe
 
@@ -116,3 +132,5 @@ docs/_build/
 # PyBuilder
 target/
 
+# Editors
+*.sublime*

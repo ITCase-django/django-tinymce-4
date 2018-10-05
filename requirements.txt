@@ -1,4 +1,4 @@
-django>=1.9,<1.10
+django>=1.9,<1.11
 django-filebrowser>=3.7,<3.8
 django-grappelli>=2.8,<2.9
 

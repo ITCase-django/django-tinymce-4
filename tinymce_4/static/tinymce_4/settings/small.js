@@ -1,7 +1,7 @@
 'use strict';
 
-tinymce.init({
-  selector: 'textarea.tinymce',
+var tinySettings = {
+  // selector: 'textarea.tinymce4',
   theme: 'modern',
   relative_urls: false,
   style_formats: [
@@ -35,4 +35,4 @@ tinymce.init({
       { title: 'Justify', icon: 'alignjustify', format: 'alignjustify'}
     ]}
   ]
-});
+}
