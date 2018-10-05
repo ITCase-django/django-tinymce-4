@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.0.23
+0.0.24
 ------
 * Fix the "tinyMCE" initializing for grappelli inline fields
 * Update requirements and bower deps
