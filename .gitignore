@@ -1,5 +1,9 @@
 # Example
 *.sqlite3
+example/tiny_example/media/*
+!example/tiny_example/media/uploads
+example/tiny_example/media/uploads/*
+!example/tiny_example/media/uploads/.gitkeep
 
 # Bower
 bower_components

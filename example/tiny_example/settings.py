@@ -2,6 +2,8 @@
 
 import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '$vsx2jd$vmuk96l5rz2+)!hji8-2urbo-rtc&$4&1zlks1)1-8'
 
@@ -60,10 +62,10 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                             'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
