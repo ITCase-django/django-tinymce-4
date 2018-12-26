@@ -2,5 +2,3 @@ recursive-include tinymce_4/static *
 
 include README.rst
 include CHANGELOG.rst
-
-include requirements.txt
