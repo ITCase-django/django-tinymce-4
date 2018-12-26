@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'tiny_example',
 
     'django.contrib.admin',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
