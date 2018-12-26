@@ -1,5 +1,7 @@
 django-tinymce-4
 ================
+.. image:: https://travis-ci.com/ITCase-django/django-tinymce-4.svg?branch=master
+    :target: https://travis-ci.com/ITCase-django/django-tinymce-4
 
 Integrate `TinyMCE4`_ in `Django`_ projects with `Django Filebrowser`_
 
