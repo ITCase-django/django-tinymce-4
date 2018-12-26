@@ -15,7 +15,7 @@
                     <li>password: <em>admin</em></li>
                 </ul>
             </div>
-            <div><a href="/admin/tiny_example/tinyexample/add/" target="_blank">Add new object</a></div>
+            <div><a href="{% url 'admin:tiny_example_tinyexample_add' %}" target="_blank">Add new object</a></div>
         {% endfor %}
     </div>
 </body>
