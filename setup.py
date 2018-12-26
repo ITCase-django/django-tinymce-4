@@ -14,9 +14,8 @@ NAME = 'django-tinymce-4'
 URL = 'https://github.com/ITCase-django/django-tinymce-4'
 
 REQUIRES = [
-    'django-filebrowser>=3.9,<3.10',
-    'django-grappelli>=2.10,<2.11',
-    'django>=1.11,<2',
+    'django',
+    'django-filebrowser',
 
     'pillow',
 ]
