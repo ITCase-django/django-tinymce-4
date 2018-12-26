@@ -94,7 +94,7 @@ Setup environment
 
 .. code-block:: bash
 
-  cd django-tinymce-4/example/tiny_example/
+  cd django-tinymce-4/example
   python manage.py runserver
 
 **Build css**

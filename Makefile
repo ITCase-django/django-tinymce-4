@@ -5,7 +5,6 @@ install-tinymce:
 init-example:
 	cd ./example/ && python manage.py migrate
 	@echo "\nCreated db.sqlite3 file"
-	cd ./example/ && python manage.py createsuperuser
 
 pypi:
 	python setup.py sdist upload

@@ -1,7 +1,5 @@
 # Example
-example/*.db
-example/*.sqlite*
-example/media/*
+*.sqlite3
 
 # Bower
 bower_components
