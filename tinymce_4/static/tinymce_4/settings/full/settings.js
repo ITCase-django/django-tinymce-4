@@ -7,6 +7,7 @@ var tinySettings = {
   valid_children: '+a[h1|h2|h3|h4|h5|h6|p|span|div|img]',
   forced_root_block: 'p',
   height: '350px',
+  body_class: 'content',
 
   language_url: '',
 

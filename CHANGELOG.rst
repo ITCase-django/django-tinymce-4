@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.0.25
+------
+* Add 'body_class' in settings default class 'content'
+* Update tinymce4 to 4.9.6
+* Update packages and bower deps
+
 0.0.24
 ------
 * Fix the "tinyMCE" initializing for grappelli inline fields
