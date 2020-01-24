@@ -8,8 +8,14 @@
         {% for obj in tiny_objects %}
             {{ obj.tiny_field|safe }}
         {% empty %}
-            <div>Run make init-example in django-tinymce-4 dir</div>
-            <div><a href="/admin/tiny_example/testtiny/add/" target="_blank">Add new object</a></div>
+            <div>Run <em>make init-example</em> in django-tinymce-4 dir</div>
+            <div>Use for admin part:
+                <ul>
+                    <li>login: <em>admin</em></li>
+                    <li>password: <em>admin</em></li>
+                </ul>
+            </div>
+            <div><a href="{% url 'admin:tiny_example_tinyexample_add' %}" target="_blank">Add new object</a></div>
         {% endfor %}
     </div>
 </body>

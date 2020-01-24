@@ -1,33 +1,35 @@
 # -*- coding: utf-8 -*-
 
 from django.conf import settings
-from django.conf.urls import include, url
+from django.conf.urls import include, static, url
 from django.contrib import admin
-from django.shortcuts import render
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic.list import ListView
 
 from filebrowser.sites import site as fb_site
 
-from .models import TestTiny
+from .models import TinyExample
 
 
-def get_context():
-    return {'tiny_objects': TestTiny.objects.all()}
+class IndexView(ListView):
 
+    context_object_name = 'tiny_objects'
+    model = TinyExample
+    template_name = 'index.html'
+
+
+admin.site.register(TinyExample)
 
 urlpatterns = [
-    url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include([
-        url(r'^', include(admin.site.urls)),
-        url(r'^filebrowser/', include(fb_site.urls)),
+        url(r'^', admin.site.urls),
+        url(r'^filebrowser/', fb_site.urls),
+        url(r'^grappelli/', include('grappelli.urls')),
     ])),
 
-    url(r'^$', lambda request: render(request, 'index.html', get_context())),
+    url(r'^$', IndexView.as_view()),
 ]
 
-if settings.DEBUG:
-    urlpatterns.extend([
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT}),
-        url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.STATIC_ROOT}),
-    ])
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static.static(settings.MEDIA_URL,
+                             document_root=settings.MEDIA_ROOT)

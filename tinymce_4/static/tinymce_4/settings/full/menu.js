@@ -21,6 +21,6 @@ var menu = {
   },
   plugins: {
     title: 'Plugins',
-    items: 'insertzoomimage'
+    items: 'insertzoomimage typograf'
   }
 }
