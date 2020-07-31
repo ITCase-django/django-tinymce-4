@@ -1,2 +1,215 @@
-console.log('from tiny')
-var tinymce=null,tinyMCEPopup,tinyMCE;tinyMCEPopup={init:function(){var b=this,a,c;a=b.getWin();tinymce=a.tinymce;tinyMCE=a.tinyMCE;b.editor=tinymce.EditorManager.activeEditor;b.params=b.editor.windowManager.getParams();b.dom = new tinymce.dom.DOMUtils(document,{ownEvents:true,proxy:tinyMCEPopup._eventProxy});b.dom.bind(window,"ready",b._onDOMLoaded,b);b.dom.loadCSS(b.editor.settings.popup_css);b.listeners=[];b.onInit={add:function(e,d){b.listeners.push({func:e, scope:d})}};b.isWindow=!b.getWindowArg("mce_inline");b.id=b.getWindowArg("mce_window_id");},getWin:function(){return(!window.frameElement&&window.dialogArguments)||opener||parent||top},getWindowArg:function(c,b){var a=this.params[c];return tinymce.is(a)?a:b},getParam:function(b,a){return this.editor.getParam(b,a)},getLang:function(b,a){return this.editor.getLang(b,a)},execCommand:function(d,c,e,b){b=b||{};b.skip_focus=1;this.restoreSelection();return this.editor.execCommand(d,c,e,b)},resizeToInnerSize:function(){var a=this;setTimeout(function(){var b=a.dom.getViewPort(window);},10)},executeOnLoad:function(s){this.onInit.add(function(){eval(s)})},storeSelection:function(){this.editor.windowManager.bookmark=tinyMCEPopup.editor.selection.getBookmark(1)},restoreSelection:function(){var a=tinyMCEPopup;if(!a.isWindow&&tinymce.isIE){a.editor.selection.moveToBookmark(a.editor.windowManager.bookmark)}},requireLangPack:function(){var b=this,a=b.getWindowArg("plugin_url")||b.getWindowArg("theme_url");if(a&&b.editor.settings.language&&b.editor.settings.translate_i18n!==false&&b.editor.settings.language_load!==false){a+="/langs/"+b.editor.settings.language+"_dlg.js";if(!tinymce.ScriptLoader.isDone(a)){document.write('<script type="text/javascript" src="'+tinymce._addVer(a)+'"><\/script>');tinymce.ScriptLoader.markDone(a)}}},pickColor:function(b,a){this.execCommand("mceColorPicker",true,{color:document.getElementById(a).value,func:function(e){document.getElementById(a).value=e;try{document.getElementById(a).onchange()}catch(d){}}})},openBrowser:function(a,c,b){tinyMCEPopup.restoreSelection();this.editor.execCallback("file_browser_callback",a,document.getElementById(a).value,c,window)},confirm:function(b,a,c){this.editor.windowManager.confirm(b,a,c,window)},alert:function(b,a,c){this.editor.windowManager.alert(b,a,c,window)},close:function(){var a=this;function b(){a.editor.windowManager.close(window);tinymce=tinyMCE=a.editor=a.params=a.dom=a.dom.doc=null}if(tinymce.isOpera){a.getWin().setTimeout(b,0)} else{b()}},_restoreSelection:function(){var a=window.event.srcElement;if(a.nodeName=="INPUT"&&(a.type=="submit"||a.type=="button")){tinyMCEPopup.restoreSelection()}},_onDOMLoaded:function(){var b=tinyMCEPopup,d=document.title,e,c,a;if(b.editor.settings.translate_i18n!==false){c=document.body.innerHTML;if(tinymce.isIE){c=c.replace(/ (value|title|alt)=([^"][^\s>]+)/gi,' $1="$2"')}document.dir=b.editor.getParam("directionality","");if((a=b.editor.translate(c))&&a!=c){document.body.innerHTML=a}if((a=b.editor.translate(d))&&a!=d){document.title=d=a}}if(!b.editor.getParam("browser_preferred_colors",false)||!b.isWindow){b.dom.addClass(document.body,"forceColors")}document.body.style.display="";if(tinymce.isIE){document.attachEvent("onmouseup",tinyMCEPopup._restoreSelection);b.dom.add(b.dom.select("head")[0],"base",{target:"_self"})}b.restoreSelection();b.resizeToInnerSize();if(!b.isWindow){b.editor.windowManager.setTitle(window,d)} else{window.focus()}if(!tinymce.isIE&&!b.isWindow){b.dom.bind(document,"focus",function(){b.editor.windowManager.focus(b.id)})}tinymce.each(b.dom.select("select"),function(f){f.onkeydown=tinyMCEPopup._accessHandler});tinymce.each(b.listeners,function(f){f.func.call(f.scope,b.editor)});if(b.getWindowArg("mce_auto_focus",true)){window.focus();tinymce.each(document.forms,function(g){tinymce.each(g.elements,function(f){if(b.dom.hasClass(f,"mceFocus")&&!f.disabled){f.focus();return false;}})})}document.onkeyup=tinyMCEPopup._closeWinKeyHandler},_accessHandler:function(a){a=a||window.event;if(a.keyCode==13||a.keyCode==32){var b=a.target||a.srcElement;if(b.onchange){b.onchange()}return tinymce.dom.Event.cancel(a)}},_closeWinKeyHandler:function(a){a=a||window.event;if(a.keyCode==27){tinyMCEPopup.close()}},_eventProxy:function(a){return function(b){tinyMCEPopup.dom.events.callNativeHandler(a,b)}}};tinyMCEPopup.init();
+// overridden from "django-grappelli 2.9.1"
+
+'use strict';
+
+// Uncomment and change this document.domain value if you are loading the script cross subdomains
+// document.domain = 'moxiecode.com';
+
+var tinymce = null;
+var tinyMCE;
+
+var tinyMCEPopup = {
+  init : function() {
+    var self = this;
+    var win;
+    var c;
+    win = self.getWin();
+    tinymce = win.tinymce;
+    tinyMCE = win.tinyMCE;
+    self.editor = tinymce.EditorManager.activeEditor;
+    self.params = {}; // self.editor.windowManager.getParams();
+    self.dom = new tinymce.dom.DOMUtils(document, {
+      ownEvents : true,
+      proxy : tinyMCEPopup._eventProxy
+    });
+    self.dom.bind(window, "ready", self._onDOMLoaded, self);
+    self.dom.loadCSS(self.editor.settings.popup_css);
+    self.listeners = [];
+    self.onInit = {
+      add : function(SVGelem, events) {
+        self.listeners.push({
+          func : SVGelem,
+          scope : events
+        });
+      }
+    };
+    self.isWindow = !self.getWindowArg("mce_inline");
+    self.id = self.getWindowArg("mce_window_id");
+  },
+  getWin : function() {
+    return !window.frameElement && window.dialogArguments || opener || parent || top;
+  },
+  getWindowArg : function(name, defaultValue) {
+    var value = this.params[name];
+    return tinymce.is(value) ? value : defaultValue;
+  },
+  getParam : function(name, defaultValue) {
+    return this.editor.getParam(name, defaultValue);
+  },
+  getLang : function(name, defaultValue) {
+    return this.editor.getLang(name, defaultValue);
+  },
+  execCommand : function(cmd, val, options, args) {
+    args = args || {};
+    args.skip_focus = 1;
+    this.restoreSelection();
+    return this.editor.execCommand(cmd, val, options, args);
+  },
+  resizeToInnerSize : function() {
+    var editor = this;
+    setTimeout(function() {
+      var _webStorage = editor.dom.getViewPort(window);
+    }, 10);
+  },
+  executeOnLoad : function(s$jscomp$2) {
+    this.onInit.add(function() {
+      eval(s$jscomp$2);
+    });
+  },
+  storeSelection : function() {
+    this.editor.windowManager.bookmark = tinyMCEPopup.editor.selection.getBookmark(1);
+  },
+  restoreSelection : function() {
+    var self = tinyMCEPopup;
+    if (!self.isWindow && tinymce.isIE) {
+      self.editor.selection.moveToBookmark(self.editor.windowManager.bookmark);
+    }
+  },
+  requireLangPack : function() {
+    var self = this;
+    var url = self.getWindowArg("plugin_url") || self.getWindowArg("theme_url");
+    if (url && self.editor.settings.language && self.editor.settings.translate_i18n !== false && self.editor.settings.language_load !== false) {
+      url = url + ("/langs/" + self.editor.settings.language + "_dlg.js");
+      if (!tinymce.ScriptLoader.isDone(url)) {
+        document.write('<script type="text/javascript" src="' + tinymce._addVer(url) + '">\x3c/script>');
+        tinymce.ScriptLoader.markDone(url);
+      }
+    }
+  },
+  pickColor : function(e, element_id) {
+    this.execCommand("mceColorPicker", true, {
+      color : document.getElementById(element_id).value,
+      func : function(declarations) {
+        document.getElementById(element_id).value = declarations;
+        try {
+          document.getElementById(element_id).onchange();
+        } catch (d) {
+        }
+      }
+    });
+  },
+  openBrowser : function(element_id, type, url) {
+    tinyMCEPopup.restoreSelection();
+    this.editor.execCallback("file_browser_callback", element_id, document.getElementById(element_id).value, type, window);
+  },
+  confirm : function(win, loseX, args) {
+    this.editor.windowManager.confirm(win, loseX, args, window);
+  },
+  alert : function(win, loseX, args) {
+    this.editor.windowManager.alert(win, loseX, args, window);
+  },
+  close : function() {
+    /**
+     * @return {undefined}
+     */
+    function close() {
+      self.editor.windowManager.close(window);
+      tinymce = tinyMCE = self.editor = self.params = self.dom = self.dom.doc = null;
+    }
+    var self = this;
+    if (tinymce.isOpera) {
+      self.getWin().setTimeout(close, 0);
+    } else {
+      close();
+    }
+  },
+  _restoreSelection : function() {
+    var el = window.event.srcElement;
+    if (el.nodeName == "INPUT" && (el.type == "submit" || el.type == "button")) {
+      tinyMCEPopup.restoreSelection();
+    }
+  },
+  _onDOMLoaded : function() {
+    var t = tinyMCEPopup;
+    var ti = document.title;
+    var e;
+    var h;
+    var nv;
+    if (t.editor.settings.translate_i18n !== false) {
+      h = document.body.innerHTML;
+      if (tinymce.isIE) {
+        h = h.replace(/ (value|title|alt)=([^"][^\s>]+)/gi, ' $1="$2"');
+      }
+      document.dir = t.editor.getParam("directionality", "");
+      if ((nv = t.editor.translate(h)) && nv != h) {
+        document.body.innerHTML = nv;
+      }
+      if ((nv = t.editor.translate(ti)) && nv != ti) {
+        document.title = ti = nv;
+      }
+    }
+    if (!t.editor.getParam("browser_preferred_colors", false) || !t.isWindow) {
+      t.dom.addClass(document.body, "forceColors");
+    }
+    document.body.style.display = "";
+    if (tinymce.isIE) {
+      document.attachEvent("onmouseup", tinyMCEPopup._restoreSelection);
+      t.dom.add(t.dom.select("head")[0], "base", {
+        target : "_self"
+      });
+    }
+    t.restoreSelection();
+    t.resizeToInnerSize();
+    if (!t.isWindow) {
+      t.editor.windowManager.setTitle(window, ti);
+    } else {
+      window.focus();
+    }
+    if (!tinymce.isIE && !t.isWindow) {
+      t.dom.bind(document, "focus", function() {
+        t.editor.windowManager.focus(t.id);
+      });
+    }
+    tinymce.each(t.dom.select("select"), function(e) {
+      e.onkeydown = tinyMCEPopup._accessHandler;
+    });
+    tinymce.each(t.listeners, function(queryItem) {
+      queryItem.func.call(queryItem.scope, t.editor);
+    });
+    if (t.getWindowArg("mce_auto_focus", true)) {
+      window.focus();
+      tinymce.each(document.forms, function(rule) {
+        tinymce.each(rule.elements, function(f) {
+          if (t.dom.hasClass(f, "mceFocus") && !f.disabled) {
+            f.focus();
+            return false;
+          }
+        });
+      });
+    }
+    document.onkeyup = tinyMCEPopup._closeWinKeyHandler;
+  },
+  _accessHandler : function(e) {
+    e = e || window.event;
+    if (e.keyCode == 13 || e.keyCode == 32) {
+      var sel_services = e.target || e.srcElement;
+      if (sel_services.onchange) {
+        sel_services.onchange();
+      }
+      return tinymce.dom.Event.cancel(e);
+    }
+  },
+  _closeWinKeyHandler : function(e) {
+    e = e || window.event;
+    if (e.keyCode == 27) {
+      tinyMCEPopup.close();
+    }
+  },
+  _eventProxy : function(id) {
+    return function(evt) {
+      tinyMCEPopup.dom.events.callNativeHandler(id, evt);
+    };
+  }
+};
+
+tinyMCEPopup.init();
