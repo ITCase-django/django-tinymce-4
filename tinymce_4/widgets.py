@@ -23,7 +23,6 @@ class TinyMCEWidget(forms.Textarea):
         js = [
             'tinymce_4/tinymce/tinymce.min.js',
             'tinymce_4/tinymce/tinymce_initialization.js',
-            'tinymce_4/settings/django-filebrowser.js',
         ]
 
 
@@ -36,6 +35,7 @@ class TinyMCEFullWidget(TinyMCEWidget):
 
     class Media:
         js = [
+            'tinymce_4/settings/django-filebrowser.js',
             'tinymce_4/settings/full/settings.js',
             'tinymce_4/settings/full/custom_style_formats.js',
             'tinymce_4/settings/full/external_plugins.js',
