@@ -37,9 +37,11 @@ class TinyMCEFullWidget(TinyMCEWidget):
         js = [
             'tinymce_4/settings/django-filebrowser.js',
             'tinymce_4/settings/full/settings.js',
+            'tinymce_4/settings/full/setup.js',
             'tinymce_4/settings/full/custom_style_formats.js',
             'tinymce_4/settings/full/external_plugins.js',
             'tinymce_4/settings/full/image_class_list.js',
+            'tinymce_4/settings/full/menubar.js',
             'tinymce_4/settings/full/menu.js',
             'tinymce_4/settings/full/language_url.js',
             'tinymce_4/settings/full/plugins.js',
