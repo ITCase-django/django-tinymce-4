@@ -42,8 +42,8 @@ if (typeof tinySettings !== 'undefined') {
   }
 
   if (typeof tinyStyleFormats !== 'undefined') {
-    if (typeof customStyleFormats !== 'undefined') {
-      tinyStyleFormats = tinyStyleFormats.concat(customStyleFormats);
+    if (typeof tinyCustomStyleFormats !== 'undefined') {
+      tinyStyleFormats = tinyStyleFormats.concat(tinyCustomStyleFormats);
     }
     tinySettings.style_formats = tinyStyleFormats;
   }
