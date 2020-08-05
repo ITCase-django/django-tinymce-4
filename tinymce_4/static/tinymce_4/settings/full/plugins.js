@@ -1,8 +1,36 @@
-var plugins = [
-  'insertzoomimage advlist autolink link image lists charmap print preview hr',
-  'anchor pagebreak spellchecker searchreplace wordcount visualblocks visualchars',
-  'code fullscreen insertdatetime media nonbreaking save table directionality',
-  'emoticons template paste'
+var tinyPlugins = [
+  // custom
+  'insertzoomimage',
+  // tiny
+  'advlist',
+  'anchor',
+  'autolink',
+  'charmap',
+  'code',
+  'codesample',
+  'directionality',
+  'emoticons',
+  'fullscreen',
+  'hr',
+  'image',
+  'imagetools',
+  'importcss',
+  'insertdatetime',
+  'link',
+  'lists',
+  'media',
+  'nonbreaking',
+  'pagebreak',
+  'paste',
+  'preview',
+  'print',
+  'quickbars',
+  'save',
+  'searchreplace',
+  'spellchecker',
+  'table',
+  'template',
+  'visualblocks',
+  'visualchars',
+  'wordcount',
 ]
-
-

@@ -1,2 +1,2 @@
-var languageUrl = ''
+var tinyLanguageUrl = ''
 // '/static/tinymce_4/langs/ru.js'

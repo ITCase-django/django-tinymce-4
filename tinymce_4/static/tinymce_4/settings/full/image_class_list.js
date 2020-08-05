@@ -1,4 +1,4 @@
-var imageClassList = [
+var tinyImageClassList = [
   {
     title: 'None', value: ''
   }, {

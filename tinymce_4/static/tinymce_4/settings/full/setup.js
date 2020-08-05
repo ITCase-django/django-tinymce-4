@@ -1,0 +1,1 @@
+var tinySetup = undefined;

@@ -5,44 +5,55 @@
 if ($ === undefined) $ = django.jQuery;
 
 if (typeof tinySettings !== 'undefined') {
-  if (typeof setup !== 'undefined') {
-    tinySettings.setup = setup;
+  if (typeof tinySetup !== 'undefined') {
+    tinySettings.setup = tinySetup;
   }
 
-  if (typeof menubar !== 'undefined') {
-    tinySettings.menubar = menubar;
+  if (typeof tinyMenubar !== 'undefined') {
+    tinySettings.menubar = tinyMenubar;
   }
 
-  if (typeof menu !== 'undefined') {
-    tinySettings.menu = menu;
+  if (typeof tinyMenu !== 'undefined') {
+    tinySettings.menu = tinyMenu;
   }
 
-  if (typeof plugins !== 'undefined') {
-    tinySettings.plugins = plugins;
+  if (typeof tinyToolbar !== 'undefined') {
+    tinySettings.toolbar = tinyToolbar;
   }
 
-  if (typeof externalPlugins !== 'undefined') {
-    tinySettings.external_plugins = externalPlugins;
+  if (typeof tinyPlugins !== 'undefined') {
+    tinySettings.plugins = tinyPlugins;
   }
 
-  if (typeof imageClassList !== 'undefined') {
-    tinySettings.image_class_list = imageClassList;
+  if (typeof tinyExternalPlugins !== 'undefined') {
+    tinySettings.external_plugins = tinyExternalPlugins;
   }
 
-  if (typeof languageUrl !== 'undefined') {
-    tinySettings.language_url = languageUrl
+  if (typeof tinyImageClassList !== 'undefined') {
+    tinySettings.image_class_list = tinyImageClassList;
   }
 
-  if (typeof tableClassList !== 'undefined') {
-    tinySettings.table_class_list = imageClassList;
+  if (typeof tinyLanguageUrl !== 'undefined') {
+    tinySettings.language_url = tinyLanguageUrl;
   }
 
-  if (typeof styleFormats !== 'undefined') {
-    tinySettings.style_formats = styleFormats.concat(customStyleFormats);
+  if (typeof tinyTableClassList !== 'undefined') {
+    tinySettings.table_class_list = tinyTableClassList;
   }
 
-  if (typeof templates !== 'undefined') {
-    tinySettings.templates = templates;
+  if (typeof tinyStyleFormats !== 'undefined') {
+    if (typeof customStyleFormats !== 'undefined') {
+      tinyStyleFormats = tinyStyleFormats.concat(customStyleFormats);
+    }
+    tinySettings.style_formats = tinyStyleFormats;
+  }
+
+  if (typeof tinyTemplates !== 'undefined') {
+    tinySettings.templates = tinyTemplates;
+  }
+
+  if (typeof DjangoFilebrowser !== 'undefined') {
+    tinySettings.file_picker_callback = DjangoFilebrowser;
   }
 } else {
   console.warn('tinyMCE 4 Settings is not exists');

@@ -5,46 +5,59 @@ tinymce.PluginManager.add('insertzoomimage', function (editor, url) {
     const selfData = tinymce.activeEditor.selection.getNode()
     editor.windowManager.open({
       title: 'Insert Zoomable Image',
-      body: [
+      body: {
+        type: 'panel',
+        items: [
+          {
+            name: 'src',
+            type: 'urlinput',
+            filetype: 'image',
+            label: 'Image',
+            autofocus: true,
+            value: selfData.getAttribute('data-mce-src') || null
+          },
+          {
+            name: 'zoomableSrc',
+            type: 'urlinput',
+            filetype: 'image',
+            label: 'Zoomable Image',
+            value: selfData.getAttribute('data-image-path') || null
+          }
+        ],
+      },
+      buttons: [
         {
-          name: 'src',
-          type: 'filepicker',
-          filetype: 'image',
-          label: 'Image',
-          autofocus: true,
-          value: selfData.getAttribute('data-mce-src') || null
+          type: 'cancel',
+          text: 'Close',
         },
         {
-          name: 'zoomableSrc',
-          type: 'filepicker',
-          filetype: 'image',
-          label: 'Zoomable Image',
-          value: selfData.getAttribute('data-image-path') || null
+          type: 'submit',
+          text: 'Save',
+          primary: true,
         }
       ],
-      onSubmit: (e) => {
+      onSubmit: (api) => {
+        var data = api.getData();
+        var src = data.src.value;
+        var zoomableSrc = data.zoomableSrc.value;
         editor.insertContent(
-          '<img src="' + e.data.src + '"' + 'data-image-path="' + e.data.zoomableSrc + '"' + 'class="image_action_open-popup" />'
+          '<img src="' + src + '"' + 'data-image-path="' + zoomableSrc + '"' + 'class="image_action_open-popup" />'
         )
       }
     })
   }
 
-  editor.addMenuItem('insertzoomimage', {
+  editor.ui.registry.addMenuItem('insertzoomimage', {
     text: 'Insert zoomable image',
     context: 'insert',
     icon: 'browse',
-    onClick: () => {
-      openDialog()
-    }
+    onAction: openDialog
   })
 
-  editor.addButton('insertzoomimage', {
+  editor.ui.registry.addButton('insertzoomimage', {
     icon: 'browse',
     tooltip: 'Insert zoomable image',
     stateSelector: 'img',
-    onClick: () => {
-      openDialog()
-    }
+    onAction: openDialog
   })
 })

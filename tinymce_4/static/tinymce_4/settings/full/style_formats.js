@@ -1,4 +1,4 @@
-var styleFormats = [
+var tinyStyleFormats = [
   {
     title: 'Headers',
     items: [

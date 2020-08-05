@@ -1,4 +1,4 @@
-var tableClassList = [
+var tinyTableClassList = [
   {
     title: 'None', value: ''
   }

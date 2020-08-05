@@ -1,4 +1,4 @@
-var customStyleFormats = [
+var tinyCustomStyleFormats = [
   // {
   //   title: 'Custom Title',
   //   items: [
