@@ -1,3 +1,7 @@
 .mce-btn button {
   border: none !important;
 }
+
+.inline-group.grp-group.grp_inline_tinymce .grp-tr .grp-tools-container {
+  width: auto !important;
+}
