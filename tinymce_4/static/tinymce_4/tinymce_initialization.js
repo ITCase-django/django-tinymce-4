@@ -63,9 +63,8 @@ $(document).ready(() => {
 
   initTinyMCE();
 
-  var inlineGroup = document.getElementsByClassName('inline-group')[0];
-
-  if (inlineGroup) {
-    tinyMCEObserver.observe(inlineGroup, { childList: true, subtree: true });
-  }
+  var inlineGroups = document.getElementsByClassName('inline-group');
+  Array.from(inlineGroups).forEach(function(element) {
+    tinyMCEObserver.observe(element, { childList: true, subtree: true });
+  });
 });
