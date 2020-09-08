@@ -22,7 +22,8 @@ class TinyMCEWidget(forms.Textarea):
         }
         js = [
             'tinymce_4/tinymce/tinymce.min.js',
-            'tinymce_4/tinymce_initialization.js',
+            'tinymce_4/settings/tinymce_initialization.js',
+            'tinymce_4/settings/django-filebrowser.js',
         ]
 
 

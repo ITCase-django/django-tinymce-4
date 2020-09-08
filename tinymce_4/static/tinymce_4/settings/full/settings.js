@@ -9,6 +9,7 @@ var tinySettings = {
   forced_root_block: 'p',
 
   height: '350px',
+  body_class: 'content',
 
   plugin_preview_width: '730',
   plugin_preview_height: '550',

@@ -5,5 +5,6 @@ from django.db import models
 from tinymce_4.fields import TinyMCEModelField
 
 
-class TestTiny(models.Model):
-    tiny_field = TinyMCEModelField('TinyMCEModelField', blank=True, null=True)
+class TinyExample(models.Model):
+
+    tiny_field = TinyMCEModelField('TinyMCEModelField', blank=True)
