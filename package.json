@@ -2,7 +2,7 @@
   "name": "django-tinymce-4",
   "title": "Integrate TinyMCE in Django projects",
   "description": "",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "homepage": "http://www.github.com/ITCase-django/django-tinymce-4/",
   "author": "ITCase <info@itcase.pro> (http://www.itcase.pro/)",
   "repository": {
