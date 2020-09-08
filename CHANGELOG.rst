@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.0.24
+------
+* Update tinymce4 to 5+
+
 0.0.23
 ------
 * Fix the "tinyMCE" initializing for grappelli inline fields
