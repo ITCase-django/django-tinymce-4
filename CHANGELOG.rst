@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.0.27
+------
+* Add language.js
+
 0.0.26
 ------
 * Update tinymce4 to 5+

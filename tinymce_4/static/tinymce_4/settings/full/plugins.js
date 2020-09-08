@@ -1,6 +1,4 @@
 var tinyPlugins = [
-  // custom
-  'insertzoomimage',
   // tiny
   'advlist',
   'anchor',

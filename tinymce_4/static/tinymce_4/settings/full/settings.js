@@ -14,6 +14,7 @@ var tinySettings = {
   plugin_preview_width: '730',
   plugin_preview_height: '550',
 
+  language: '',
   language_url: '',
 
   content_css: [

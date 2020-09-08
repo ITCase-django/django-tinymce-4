@@ -1,0 +1,2 @@
+var tinyLanguageUrl = '';
+var tinyLanguage = '';

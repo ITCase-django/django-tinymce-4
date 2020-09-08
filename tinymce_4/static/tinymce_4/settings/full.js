@@ -33,6 +33,10 @@ if (typeof tinySettings !== 'undefined') {
     tinySettings.image_class_list = tinyImageClassList;
   }
 
+  if (typeof tinyLanguage !== 'undefined') {
+    tinySettings.language = tinyLanguage;
+  }
+
   if (typeof tinyLanguageUrl !== 'undefined') {
     tinySettings.language_url = tinyLanguageUrl;
   }
