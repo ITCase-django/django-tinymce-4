@@ -2,7 +2,7 @@
 
 import os
 
-from setuptools import find_packages, setup
+from setuptools import setup
 
 from tinymce_4 import __version__
 
@@ -35,7 +35,7 @@ setup(
     author=AUTHOR,
     author_email=EMAIL,
 
-    packages=find_packages(exclude=['example']),
+    packages=['tinymce_4'],
     include_package_data=True,
     zip_safe=False,
     install_requires=REQUIRES,
