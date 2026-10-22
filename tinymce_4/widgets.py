@@ -11,7 +11,9 @@ class TinyMCEWidget(forms.Textarea):
 
     tiny_class = 'tinymce4'
 
-    def __init__(self, attrs={}):
+    def __init__(self, attrs=None):
+        # Avoid shared mutable default; do not mutate the caller's dict.
+        attrs = dict() if attrs is None else attrs.copy()
         css_class = attrs.get('class', '')
         attrs['class'] = ' '.join([self.tiny_class, css_class])
         super().__init__(attrs)
