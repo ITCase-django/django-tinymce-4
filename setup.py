@@ -47,7 +47,6 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 5.2',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
