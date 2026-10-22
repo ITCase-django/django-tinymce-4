@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.0.28
+------
+* Require Python >= 3.10 and Django >= 5.2,<6
+* Update example and README
+* Fix setuptools warning about static TinyMCE directories as packages
+
 0.0.27
 ------
 * Add language.js
