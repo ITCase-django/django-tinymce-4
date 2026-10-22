@@ -1,8 +1,9 @@
 
 from django.conf import settings
-from django.conf.urls import include, static, url
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import include, path
 from django.views.generic.list import ListView
 
 from filebrowser.sites import site as fb_site
@@ -20,15 +21,14 @@ class IndexView(ListView):
 admin.site.register(TinyExample)
 
 urlpatterns = [
-    url(r'^admin/', include([
-        url(r'^', admin.site.urls),
-        url(r'^filebrowser/', fb_site.urls),
-        url(r'^grappelli/', include('grappelli.urls')),
+    path('admin/', include([
+        path('', admin.site.urls),
+        path('filebrowser/', fb_site.urls),
+        path('grappelli/', include('grappelli.urls')),
     ])),
 
-    url(r'^$', IndexView.as_view()),
+    path('', IndexView.as_view()),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static.static(settings.MEDIA_URL,
-                             document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
