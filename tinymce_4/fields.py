@@ -14,7 +14,7 @@ class TinyMCEFormField(forms.CharField):
     def __init__(self, small_tiny=False, *args, **kwargs):
         if small_tiny:
             self.widget = TinyMCESmallWidget
-        super(TinyMCEFormField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class TinyMCEModelField(models.TextField):
@@ -23,11 +23,11 @@ class TinyMCEModelField(models.TextField):
 
     def __init__(self, *args, **kwargs):
         self._small_tiny = kwargs.pop('small_tiny', False)
-        super(TinyMCEModelField, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
         kwargs['form_class'] = TinyMCEFormField
         kwargs['widget'] = TinyMCEFullWidget
         if self._small_tiny:
             kwargs['widget'] = TinyMCESmallWidget
-        return super(TinyMCEModelField, self).formfield(**kwargs)
+        return super().formfield(**kwargs)

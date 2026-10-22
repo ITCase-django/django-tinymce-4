@@ -34,10 +34,10 @@ Add the `Django Filebrowser`_ site to your url-patterns (before any admin-urls):
 
 .. code-block:: python
 
-    url(r'^grappelli/', include('grappelli.urls')),
-    url(r'^admin/', include([
-        url(r'^', include(admin.site.urls)),
-        url(r'^filebrowser/', include(fb_site.urls)),
+    path('grappelli/', include('grappelli.urls')),
+    path('admin/', include([
+        path('', admin.site.urls),
+        path('filebrowser/', fb_site.urls),
     ])),
 
 
