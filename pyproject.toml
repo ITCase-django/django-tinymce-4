@@ -1,3 +1,53 @@
 [build-system]
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-tinymce-4"
+description = "Integrate TinyMCE 4 in Django projects"
+readme = "README.rst"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dynamic = ["version"]
+authors = [
+  { name = "Petr Zelenin", email = "po.zelenin@itcase.pro" },
+  { name = "Arkadiy Zamaraev", email = "arkadiy@bk.ru" },
+  { name = "Nikita Shalakov", email = "ggift@mail.ru" },
+]
+dependencies = [
+  "Django>=5.2,<6",
+  "django-filebrowser",
+  "pillow",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Web Environment",
+  "Framework :: Django",
+  "Framework :: Django :: 5.2",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: JavaScript",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/ITCase-django/django-tinymce-4"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["tinymce_4*"]
+namespaces = true
+
+[tool.setuptools.dynamic]
+version = { attr = "tinymce_4.__version__" }
