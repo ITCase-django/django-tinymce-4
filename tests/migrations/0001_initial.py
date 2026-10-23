@@ -1,0 +1,34 @@
+from django.db import migrations, models
+
+import tinymce_4.fields
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = []
+
+    operations = [
+        migrations.CreateModel(
+            name='TinyExample',
+            fields=[
+                (
+                    'id',
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name='ID',
+                    ),
+                ),
+                (
+                    'tiny_field',
+                    tinymce_4.fields.TinyMCEModelField(
+                        blank=True,
+                        verbose_name='TinyMCEModelField',
+                    ),
+                ),
+            ],
+        ),
+    ]
