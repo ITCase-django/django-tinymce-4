@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.0.29
+------
+* Replace setup.py with pyproject.toml
+* Add tox test suite and GitHub Actions CI
+* Remove Travis CI
+* Move tests from example to a dedicated tests package
+
 0.0.28
 ------
 * Require Python >= 3.10 and Django >= 5.2,<6
